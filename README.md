@@ -21,6 +21,8 @@ best [youtube playlist](https://www.youtube.com/playlist?list=PLKYEe2WisBTGq9T0w
 [`search_algorithms`](./algorithms/search_algorithms)<br>
 [`sorting algorithms`](./algorithms/sorting_algorithms)<br>
 
+### Other
+[`binary and bit manipulation`](./binary_bit_manipulation/README.md)<br>
 
 ## Leetcode Solution Approach Guide
 
