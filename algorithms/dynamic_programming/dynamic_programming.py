@@ -4,6 +4,7 @@
 
 """Naive recursive solution"""
 # Time: O(2^n)
+# Space: O(n)
 # Lots of sub-problems overlap here
 def fibonacci(n: int) -> int:
 	if n == 0:
