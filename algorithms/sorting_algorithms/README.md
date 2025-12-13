@@ -11,8 +11,24 @@ The highest elements "bubble" up into their correct position
 <img height=200 width=500 src=https://media.geeksforgeeks.org/wp-content/uploads/20190704131909/bubblusort.gif>
 
 
-## Counting Sort
+## Counting Sort - `O(k+n)`
 
+#### Algorithm
+
+*(Assuming an array of positive integers for this case)*
+
+Track the *frequency* of each element in the array, then use that to reconstruct the array in sorted order
+
+1. Find the maximum value `k`
+2. Create a `counts` array with `k+1` indices, initialized with 0s
+3. Iterate through the original array, and increment it's index in `counts`
+4. Reconstruct the original array in-place
+
+#### Complexity
+* **Time**: traversing the input array to find the max is `O(n)`, and creating the `counts` array of size `k` is `O(k)`
+* **Space**: since the input is modified in-place, the only extra space is the `counts` array of size `k`
+
+**NOTE**: This algorithm is inefficient if `k` is big relative `n` (for ex, array has only 3 elements but the max value is 1 million)
 
 ## Insertion Sort
 
