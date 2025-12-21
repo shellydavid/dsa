@@ -1,7 +1,7 @@
 
 # Linked Lists
 
-![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F0*0XVK02Guco9xJMJL.png&f=1&nofb=1&ipt=0ebff9ae76fd9ac20c62349634ff5ef08a26c279a68a889b73abd96ac3bcde28)
+<img src='../../img/linked-lists.png'>
 
 Linked lists are ideal for anything that requires modification to the beginning (or end for doubly linked lists)
 

@@ -1,7 +1,7 @@
 
 # Heaps & Priority Queues
 
-![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.3tLstooZf68D_Y-rMqo6OAHaDP%3Fpid%3DApi&f=1&ipt=e80eea6b3c4418fee599c802d701f2ca1c05c545517179c1ef63f9a0cc54f804&ipo=images)
+<img src='../../img/heaps.png'>
 
 **Min Heap**: a binary tree where every parent is LESS than its children 
 - The smallest value will be the root node

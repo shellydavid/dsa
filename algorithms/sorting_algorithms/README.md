@@ -30,6 +30,8 @@ Track the *frequency* of each element in the array, then use that to reconstruct
 
 **NOTE**: This algorithm is inefficient if `k` is big relative `n` (for ex, array has only 3 elements but the max value is 1 million)
 
+<img src='../../img/counting-sort.png'>
+
 ## Insertion Sort
 
 

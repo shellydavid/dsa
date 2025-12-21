@@ -47,7 +47,7 @@ to perform operations on the input.
 - Smaller polynomials are disregarded, because the worst polynomial drives the complexity
   - Ex: O(3n^2 + 2n + logn) -> O(n^2)
 
-![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1400%2F1*5ZLci3SuR0zM_QlZOADv8Q.jpeg&f=1&nofb=1&ipt=b5e50d4d9b07c8caeff2bc98c94bf745e942664241590b43e5b8b91a9c2defbb)
+<img src='img/time-complexity.jpeg'>
 
 **O(1)**:
 - Time: An immediate lookup

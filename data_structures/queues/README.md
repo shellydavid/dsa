@@ -1,7 +1,7 @@
 
 # Queues
 
-![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.LFNjMGnC1PgZKUxkLQ6i0gHaDt%3Fpid%3DApi&f=1&ipt=0cd35e7dae9b00ea32c41e8ed44cedeea05128235e5ff7098d9f252373508686&ipo=images)
+<img src='../../img/queues.png'>
 
 **FIFO**: First In, First Out
 

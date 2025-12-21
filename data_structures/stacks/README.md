@@ -1,7 +1,7 @@
 
 # Stacks
 
-![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.YhoVsNJLcYskqnaxdccE6gHaGO%3Fpid%3DApi&f=1&ipt=93b81dfd34f32e9d7e338f36a07c37556a82d624daa8c92bd64bb3a28a34f0a2&ipo=images)
+<img src='../../img/stacks.png'>
 
 **LIFO**: Last In, First Out
 

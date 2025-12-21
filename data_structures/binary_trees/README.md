@@ -1,7 +1,7 @@
 
 # Binary Trees / Binary Search Trees
 
-![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fakcoding.com%2Fwp-content%2Fuploads%2F2024%2F04%2Fbinary-tree-data-structure.png&f=1&nofb=1&ipt=611c06df113a89353722d549924166208b3ce765d56daaa5ff1e543c94c1dad0)
+<img src='../../img/binary-tree.png'>
 
 - **Perfect tree**: all levels are filled up
 - **Complete/full tree**: all levels are filled up, except possibly the last level
@@ -42,7 +42,7 @@ BSTs are Binary Trees with the following properties:
 1. All descendants to the LEFT of a node are <
 2. All descendants to the RIGHT of a node are >=
 
-![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.KcbTx8QHl23OXMkuLTwyxAAAAA%3Fpid%3DApi&f=1&ipt=a285e12a786385b31d2949f122e47e6da2bcfe1944cb73f864014a8834046c89&ipo=images)
+<img src='../../img/binary-search-tree.png'>
 
 This makes searching for an element very efficient `O(log n)`, bec
 at each step you can eliminate the entire left or right half

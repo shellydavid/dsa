@@ -1,7 +1,7 @@
 
 # Binary Conversions & Bit Manipulation
 
-![img](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.cpu-design.at%2Fwp-content%2Fuploads%2F2015%2F11%2FBase2.png&f=1&nofb=1&ipt=98196605e90d5ca8d9f888137b6177db5ca3d5fe9cfe5098f6a5228f3194041b)
+<img src='../img/binary.png'>
 
 
 ## Converting Decimal -> Binary
@@ -9,7 +9,7 @@
 1. Divide by 2 continuously and record remainders
 2. Write remainders in reverse order
 
-![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.geeksforgeeks.org%2Fwp-content%2Fuploads%2F20230731110443%2FJava-Program-for-Decimal-to-Binary-Conversion-300.png&f=1&nofb=1&ipt=57aabe38c1792358fc7d1c04c92cb0c6e973409d3f52e17d9aca7cf3d06a84bc)
+<img src='../img/decimal-binary-conversion.png'>
 
 
 ## Bit Manipulation
@@ -21,7 +21,7 @@
 6. Right shift - `>>`  (divides by power of 2)
    - Logical (always pads with 0's)
    - Arithmetic/Signed shift (keeps sign of original number)
-![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.AM9zIe5ieqt2ZiJEjxU7yQHaCa%3Fpid%3DApi%26ucfimg%3D1&f=1&ipt=4227fcb4e1a067ede7bcd9743707660f60ea64b48bd2a946ccf51c300d2e7c16&ipo=images)
+<img src='../img/bit-shifts.png'>
 
 
 ## Representing Negative Numbers in Binary

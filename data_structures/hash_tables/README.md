@@ -1,7 +1,7 @@
 
 # Hash Sets & Maps
 
-![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sahinarslan.tech%2Fstatic%2F34a1965ce85b83bbf3ae793be9fae6ec%2Fa2510%2Fhash-table-wikipedia.jpg&f=1&nofb=1&ipt=db0eff670c92ab33eb94405d57244a7e0deb53d2c439b56a58c13ceef189f741)
+<img src='../../img/hash-function.jpg'>
 
 
 ## Hash Function

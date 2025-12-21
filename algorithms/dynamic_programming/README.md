@@ -1,7 +1,7 @@
 # Dynamic programming
 Aims to optimize problems that have overlapping sub-problems
 
-![img](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.geeksforgeeks.org%2Fwp-content%2Fuploads%2F20240319104901%2Fdynamic-programming.webp&f=1&nofb=1&ipt=693160f48d98e92eb729843264370a5900a9775aa2824048670c34afa8356d12)
+<img src='../../img/dynamic-programming.webp'>
 
 
 ## Levels/Steps
