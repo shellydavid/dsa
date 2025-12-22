@@ -30,9 +30,15 @@ Track the *frequency* of each element in the array, then use that to reconstruct
 
 **NOTE**: This algorithm is inefficient if `k` is big relative `n` (for ex, array has only 3 elements but the max value is 1 million)
 
-<img src='../../img/counting-sort.png'>
+<img src='../../img/counting-sort.png' height=400 width=700>
 
-## Insertion Sort
+
+## Insertion Sort - `O(n^2)`
+
+1. To start, the first element is considered the 'sorted region' and the rest of the array is the 'unsorted region'.
+2. Iterate through the array and insert elements into the 'sorted region' in their correct positions
+
+<img src='../../img/insertion-sort.png' height=400 width=600>
 
 
 ## Merge Sort - `O(n logn)`
