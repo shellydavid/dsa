@@ -36,7 +36,7 @@ Track the *frequency* of each element in the array, then use that to reconstruct
 ## Insertion Sort - `O(n^2)`
 
 1. To start, the first element is considered the 'sorted region' and the rest of the array is the 'unsorted region'.
-2. Iterate through the array and insert elements into the 'sorted region' in their correct positions
+2. Iterate through the array and insert elements into the 'sorted region' in their correct position
 
 <img src='../../img/insertion-sort.png' height=400 width=600>
 
@@ -54,4 +54,12 @@ Because the subarrays are sorted after each step, merging them is very efficient
 ## Quick Sort
 
 
-## Selection Sort
+## Selection Sort - `O(n^2)`
+
+1. Begin at the first index and traverse the rest of the array to find the minimum value
+2. Replace the first index with the minimum value found
+3. Move to the next index and repeat
+
+Similar to Insertion Sort, there is a 'sorted' and 'unsorted' portion of the array. As you iterate through the array, you select the minimum value from the unsorted region and swap it with the first element in the unsorted region (which should be your current index). 
+
+<img src='../../img/selection-sort.jpg' height=350 width=400>
