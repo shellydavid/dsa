@@ -46,12 +46,27 @@ Track the *frequency* of each element in the array, then use that to reconstruct
 1. **Divide & Conquer**: divide the array into halves until you reach leaves (single length arrays), which are trivially sorted
 2. **Merge** - merge the subarrays arrays back together in sorted order
 
-Because the subarrays are sorted after each step, merging them is very efficient O(n). You can simply compare indices and increment, iterating through each subarray only once (without having to go backwards or re-scan, like with bubble sort).
+Because the subarrays are sorted after each step, merging them is very efficient `O(n)`. You can simply compare indices and increment, iterating through each subarray only once (without having to go backwards or re-scan, like with bubble sort).
 
 <img height=400 src=https://www.w3schools.com/dsa/img_mergesort_long.png>
 
 
-## Quick Sort
+## Quick Sort - `O(n logn)`
+
+Divide & Conquer algorithm that recursively selects a 'pivot' *(element in the array)* and splits the array into 3 sub-arrays:
+- Elements <= the pivot
+- The pivot itself
+- Elements > the pivot
+
+Once all final base cases are reached, the sub-arrays are simply concatenated together
+
+**Time complexity breakdown**:
+ - `O(n)`: scanning the array to compare elements against the pivot
+ - `O(logn)`: recursively diving the array
+        
+**NOTE**: *A bad pivot will have `O(n^2)` overall complexity*
+
+<img src='../../img/quick-sort.webp' height=350 width=400>
 
 
 ## Selection Sort - `O(n^2)`
