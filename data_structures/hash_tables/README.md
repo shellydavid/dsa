@@ -21,14 +21,14 @@ Only immutable data types can be hashed
 - **Python mutable types**: lists, dicts
 
 
-## Hash Sets
+## [`Hash Sets`](./hash_sets.py)
 
 A hashed collection of _unique_ elements
 
 > The Python `set()` function is a hash set
 
 
-## Hash Maps
+## [`Hash Maps`](./hash_maps.py)
 
 A `key:value` pair mapping
 

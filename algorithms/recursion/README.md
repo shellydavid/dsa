@@ -8,7 +8,7 @@ Defining/solving a problem with smaller versions of itself
 2. **Recursive case**: the function calling itself with a smaller/simpler input
 
 
-## Recursive Call Stack
+## [`Recursive Call Stack`](./recursive_call_stack_practice.py)
 Recursive function calls are managed via **call stacks**
 
 1. For each recursive call, a new frame gets pushed onto the stack
@@ -17,7 +17,7 @@ Recursive function calls are managed via **call stacks**
     - The function returns its value to the return address (the function that directly called it) and gets popped
 
 
-## Recursive Backtracking
+## [`Recursive Backtracking`](./recursive_backtracking.py)
 Meant for exhaustive searches/brute-force 
 <br>
 *Ex: finding all possible solutions of a problem*
@@ -28,7 +28,7 @@ Meant for exhaustive searches/brute-force
 4. Undo the decision (backtrack)
 
 
-## Recursive Data Structures
+## [`Recursive Data Structures`](./recursion_examples.py)
 Recursion can be used for many problems on recursive-like data structures:
 - Linked lists
 - Trees

@@ -6,13 +6,13 @@
 Linked lists are ideal for anything that requires modification to the beginning (or end for doubly linked lists)
 
 
-## Singly Linked Lists
+## [`Singly Linked Lists`](./singly_linked_lists.py)
 
 - There is a `Head` node 
 - Nodes have a `next` pointer
 
 
-## Doubly Linked Lists
+## [`Doubly Linked Lists`](./doubly_linked_lists.py)
 
 - There is a `Head` and `Tail` node
 - Nodes have a `next` and `prev` pointer

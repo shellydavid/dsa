@@ -1,6 +1,6 @@
 # Search Algorithms
 
-## Binary Search - `O(log n)`
+## [`Binary Search`](./binary_search.py) - `O(log n)`
 
 Given a target value and a *sorted* array, find the middle value `M`.
 

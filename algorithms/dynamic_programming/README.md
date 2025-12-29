@@ -1,4 +1,4 @@
-# Dynamic programming
+# [`Dynamic programming`](./dynamic_programming.py)
 Aims to optimize problems that have overlapping sub-problems
 
 <img src='../../img/dynamic-programming.webp'>

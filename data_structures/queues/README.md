@@ -1,5 +1,5 @@
 
-# Queues
+# [`Queues`](./queues.py)
 
 <img src='../../img/queues.png'>
 

@@ -1,5 +1,5 @@
 
-# Graphs
+# [`Graphs`](./graphs.py)
 
 <img src='../../img/graphs.png'>
 

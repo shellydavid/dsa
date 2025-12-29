@@ -1,7 +1,7 @@
 # Sorting Algorithms
 
 
-## Bubble Sort - `O(n^2)`
+## [`Bubble Sort`](./bubble_sort.py) - `O(n^2)`
 
 1. Iterate through the array, compare two neighboring elements, and swap them if the order is incorrect. 
 2. Repeat multiple iterations over the array until it's sorted 
@@ -11,7 +11,7 @@ The highest elements "bubble" up into their correct position
 <img height=200 width=500 src=https://media.geeksforgeeks.org/wp-content/uploads/20190704131909/bubblusort.gif>
 
 
-## Counting Sort - `O(k+n)`
+## [`Counting Sort`](./counting_sort.py) - `O(k+n)`
 
 #### Algorithm
 
@@ -33,7 +33,7 @@ Track the *frequency* of each element in the array, then use that to reconstruct
 <img src='../../img/counting-sort.png' height=400 width=700>
 
 
-## Insertion Sort - `O(n^2)`
+## [`Insertion Sort`](./insertion_sort.py) - `O(n^2)`
 
 1. To start, the first element is considered the 'sorted region' and the rest of the array is the 'unsorted region'.
 2. Iterate through the array and insert elements into the 'sorted region' in their correct position
@@ -41,7 +41,7 @@ Track the *frequency* of each element in the array, then use that to reconstruct
 <img src='../../img/insertion-sort.png' height=400 width=600>
 
 
-## Merge Sort - `O(n logn)`
+## [`Merge Sort`](./merge_sort.py) - `O(n logn)`
 
 1. **Divide & Conquer**: divide the array into halves until you reach leaves (single length arrays), which are trivially sorted
 2. **Merge** - merge the subarrays arrays back together in sorted order
@@ -51,7 +51,7 @@ Because the subarrays are sorted after each step, merging them is very efficient
 <img height=400 src=https://www.w3schools.com/dsa/img_mergesort_long.png>
 
 
-## Quick Sort - `O(n logn)`
+## [`Quick Sort`](./quick_sort.py) - `O(n logn)`
 
 Divide & Conquer algorithm that recursively selects a 'pivot' *(element in the array)* and splits the array into 3 sub-arrays:
 - Elements <= the pivot
@@ -69,7 +69,7 @@ Once all final base cases are reached, the sub-arrays are simply concatenated to
 <img src='../../img/quick-sort.webp' height=350 width=400>
 
 
-## Selection Sort - `O(n^2)`
+## [`Selection Sort`](./selection_sort.py) - `O(n^2)`
 
 1. Begin at the first index and traverse the rest of the array to find the minimum value
 2. Replace the first index with the minimum value found

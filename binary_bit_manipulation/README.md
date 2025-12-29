@@ -4,7 +4,7 @@
 <img src='../img/binary.png'>
 
 
-## Converting Decimal -> Binary
+## [`Converting Decimal -> Binary`](./binary_conversions.py)
 
 1. Divide by 2 continuously and record remainders
 2. Write remainders in reverse order
@@ -12,7 +12,7 @@
 <img src='../img/decimal-binary-conversion.png'>
 
 
-## Bit Manipulation
+## [`Bit Manipulation`](./bit_manipulation.py)
 1. Bitwise AND - `&`
 2. Bitwise OR - `|`
 3. Bitwise XOR - `^` (true if values are different, false if same)

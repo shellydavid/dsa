@@ -1,5 +1,5 @@
 
-# Stacks
+# [`Stacks`](./stacks.py)
 
 <img src='../../img/stacks.png'>
 
