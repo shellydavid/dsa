@@ -9,17 +9,15 @@ Singly Linked Lists
 * Traverse list
 * Lookup a value
 * Modify a value
-* Get head  # TODO
+* Get head
 
 * Insertion:
 	- Insert at beginning
-	# TODO (below)
-	# - X Insert at end
+	- Insert at end
 	# - X Insert at position
 * Deletion:
 	- Delete at beginning
-	# TODO (below)
-	# - X Delete at end
+	- Delete at end
 	# - X Delete at position
 """
 
@@ -28,24 +26,32 @@ class SinglyNode:
 	def __init__(self, val, next=None):
 		self.val = val
 		self.next = next
+  
+	def __str__(self):
+		return f'{self.val}'
+
 
 
 class SinglyLinkedList:
 	def __init__(self, head=None):
 		self.head = head
 
-	def __str__(self):
-		"""Display"""
+	def display(self):
+		"""Display all node values in a clean format"""
 		curr = self.head
 		vals = []
 		while curr:
 			vals.append(str(curr.val))
 			curr = curr.next
-		return " -> ".join(vals)
+		print(" -> ".join(vals))
 
 	def is_empty(self):
 		"""Check if empty"""
 		return self.head is None
+
+	def get_head(self):
+		"""Return value of list head"""
+		return self.head.val
 
 	def length(self):
 		"""Get length"""
@@ -57,14 +63,14 @@ class SinglyLinkedList:
 		return length
 
 	def traverse(self):
-		"""Traverse list"""
+		"""Traverse and print all values 1 by 1"""
 		curr = self.head
 		while curr:
 			print(curr.val)
 			curr = curr.next
 
-	def lookup(self, target):
-		"""Lookup a value"""
+	def lookup_value(self, target):
+		"""Check if a target value exists in the list"""
 		curr = self.head
 		while curr:
 			if curr.val == target:
@@ -72,8 +78,8 @@ class SinglyLinkedList:
 			curr = curr.next
 		return False
 
-	def modify(self, index, new_val):
-		"""Modify a value"""
+	def modify_value(self, index, new_val):
+		"""Modify the value of a node at the specified position (assuming 0-based)"""
 		if self.is_empty() or index >= self.length():
 			raise IndexError("Index out of bounds")
 		else:
@@ -90,53 +96,79 @@ class SinglyLinkedList:
 
 	def del_at_beginning(self):
 		"""Delete at beginning"""
+		old_head = self.head
 		self.head = self.head.next
+		del old_head
+
+	def insert_at_end(self, node):
+		"""Insert at end
+		Modifying the end of a SLL requires traversing the entire list"""
+		# Traverse until last node (with node.next == None) is reached
+		curr = self.head
+		while curr.next:
+			curr = curr.next
+		# Insert new node
+		curr.next = node
+		node.next = None
+
+	def del_at_end(self):
+		"""Delete the last node
+		Modifying the end of a SLL requires traversing the entire list"""
+		# Traverse until we reach the second to last node (node.next.next == None)
+		curr = self.head
+		while curr.next.next:
+			curr = curr.next
+		del curr.next  # Delete the last node
+		curr.next = None  # Update the new 'last node' to have next=None
+		
 
 
-print('------')
-print('Add to beginning of list:')
-my_list = SinglyLinkedList()
-for i in range(1, 4):
-	my_list.insert_at_beginning(SinglyNode(i))
-	print(my_list)
-print('is empty: ', my_list.is_empty())
-print('length: ', my_list.length())
+
+A = SinglyNode(4)
+sll = SinglyLinkedList(head=A)
+
+print('\n-----------Insertion & Deletion-----------')
+print('~~ Current list ~~')
+sll.display()
+print(f'Head: {sll.get_head()}')
+
+print('\nA. Insert 1, 2, 3 at beginning - O(1):')
+sll.insert_at_beginning(SinglyNode(3))
+sll.insert_at_beginning(SinglyNode(2))
+sll.insert_at_beginning(SinglyNode(1))
+sll.display()
+print(f'Head: {sll.get_head()}')
+
+print('\nB. Del at beginning - O(1):')
+sll.del_at_beginning()
+sll.display()
+print(f'Head: {sll.get_head()}')
+
+print('\nC: Insert 5, 6 at end - O(n)')
+sll.insert_at_end(SinglyNode(5))
+sll.insert_at_end(SinglyNode(6))
+sll.display()
+
+print(f'\nD: Del at end - O(n):')
+sll.del_at_end()
+sll.display()
 
 
-print('\n------')
-print('Del at beginning of list:')
-for i in range(my_list.length()):
-	print(my_list)
-	my_list.del_at_beginning()
-print('is empty: ', my_list.is_empty())
-print('length: ', my_list.length())
 
+print('\n\n-----------Operations-----------')
+print('~~ Current list ~~')
+sll.display()
 
-print('\n------')
-print('Traverse list:')
-my_list = SinglyLinkedList()
-for i in range(10, 0, -1):
-	my_list.insert_at_beginning(SinglyNode(i))
-print(f'LIST | {my_list}')
-print('traverse:')
-my_list.traverse()
+print('\nTraverse list:')
+sll.traverse()
 
+print('\nList length: ', sll.length())
+print('List is empty: ', sll.is_empty())
 
-print('\n------')
-print('Lookup a value:')
-print(f'LIST | {my_list}')
-print(f'2: {my_list.lookup(2)}')
-print(f'8: {my_list.lookup(8)}')
-print(f'50: {my_list.lookup(50)}')
-print(f'70: {my_list.lookup(70)}')
+print('\nLookup 2 (int): ', sll.lookup_value(2))
+print('Lookup 13 (int): ', sll.lookup_value(13))
 
-
-print('\n------')
-print('Modify a value:')
-print(f'LIST | {my_list}')
-print(f'change index 0 to 100:')
-my_list.modify(0, 100)
-print(my_list)
-print(f'change index 9 to 55:')
-my_list.modify(9, 55)
-print(my_list)
+print('\nModify value at index 1 to 100:')
+sll.display()
+sll.modify_value(index=1, new_val=100)
+sll.display()
