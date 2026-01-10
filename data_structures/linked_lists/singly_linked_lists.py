@@ -14,11 +14,11 @@ Singly Linked Lists
 * Insertion:
 	- Insert at beginning
 	- Insert at end
-	# - X Insert at position
+	- Insert at position
 * Deletion:
 	- Delete at beginning
 	- Delete at end
-	# - X Delete at position
+	- Delete at position
 """
 
 
@@ -94,11 +94,19 @@ class SinglyLinkedList:
 		node.next = self.head
 		self.head = node
 
-	def del_at_beginning(self):
-		"""Delete at beginning"""
-		old_head = self.head
-		self.head = self.head.next
-		del old_head
+	def insert_at_pos(self, pos, node):
+		"""Insert a node at a specified position (assuming 0-based)
+		Requires traversing the list"""
+		if pos > self.length():
+			raise Exception('Position is invalid')
+		curr = self.head
+		i = 0
+		while curr.next:
+			if i == pos-1:
+				node.next = curr.next  # Make the new node point to the next position
+				curr.next = node  # Update the current node to point to the new node
+			curr = curr.next
+			i += 1
 
 	def insert_at_end(self, node):
 		"""Insert at end
@@ -110,7 +118,26 @@ class SinglyLinkedList:
 		# Insert new node
 		curr.next = node
 		node.next = None
+  
+	def del_at_beginning(self):
+		"""Delete at beginning"""
+		old_head = self.head
+		self.head = self.head.next
+		del old_head
 
+	def del_at_pos(self, pos):
+		"""Delete a node at a specified position (assuming 0-based)
+		Requires traversing the list"""
+		curr = self.head
+		i = 0
+		while curr.next:
+			if i == pos-1:
+				del_node = curr.next  # Store the current node, to del later
+				curr.next = curr.next.next  # Move the current node over
+				del del_node
+			curr = curr.next
+			i += 1
+   
 	def del_at_end(self):
 		"""Delete the last node
 		Modifying the end of a SLL requires traversing the entire list"""
@@ -132,10 +159,20 @@ print('~~ Current list ~~')
 sll.display()
 print(f'Head: {sll.get_head()}')
 
-print('\nA. Insert 1, 2, 3 at beginning - O(1):')
+print('\nA. Insert 1, 3 at beginning - O(1):')
 sll.insert_at_beginning(SinglyNode(3))
-sll.insert_at_beginning(SinglyNode(2))
 sll.insert_at_beginning(SinglyNode(1))
+sll.display()
+print(f'Head: {sll.get_head()}')
+
+print('\nB: Insert node with val=2 at pos 1 - O(n):')
+sll.insert_at_pos(pos=1, node=SinglyNode(2))
+sll.display()
+print(f'Head: {sll.get_head()}')
+
+print('\nC: Insert 5, 6 at end - O(n):')
+sll.insert_at_end(SinglyNode(5))
+sll.insert_at_end(SinglyNode(6))
 sll.display()
 print(f'Head: {sll.get_head()}')
 
@@ -144,14 +181,15 @@ sll.del_at_beginning()
 sll.display()
 print(f'Head: {sll.get_head()}')
 
-print('\nC: Insert 5, 6 at end - O(n)')
-sll.insert_at_end(SinglyNode(5))
-sll.insert_at_end(SinglyNode(6))
-sll.display()
-
 print(f'\nD: Del at end - O(n):')
 sll.del_at_end()
 sll.display()
+print(f'Head: {sll.get_head()}')
+
+print('\nE: Del node at pos 1 - O(n):')
+sll.del_at_pos(pos=1)
+sll.display()
+print(f'Head: {sll.get_head()}')
 
 
 
