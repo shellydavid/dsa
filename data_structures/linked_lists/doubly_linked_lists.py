@@ -15,11 +15,11 @@ Doubly Linked Lists
 * Insertion:
 	- Insert at beginning
 	- Insert at end
-	# - X Insert at position
+	- Insert at position
 * Deletion:
 	- Delete at beginning
 	- Delete at end
-	# - X Delete at position
+	- Delete at position
 """
 
 
@@ -105,6 +105,22 @@ class DoublyLinkedList:
         self.head.prev = node
         self.head = node
         
+    def insert_at_pos(self, pos, node):
+        '''Insert a node at a specified position between head & tail (assuming 0-based)
+            Requires traversing the list'''
+        if pos > self.length():
+            raise Exception('Position is invalid')
+        curr = self.head
+        i = 0
+        while curr.next:
+            if i == pos-1:
+                node.next = curr.next
+                node.prev = curr
+                curr.next.prev = node
+                curr.next = node
+            curr = curr.next
+            i += 1
+
     def insert_at_end(self, node):
         '''Update tail'''
         node.prev = self.tail
@@ -118,6 +134,20 @@ class DoublyLinkedList:
         self.head.prev = None
         del old_head
         
+    def del_at_pos(self, pos):
+        '''Delete a node at a specified position between head & tail (assuming 0-based)
+        Requires traversing the list'''
+        curr = self.head
+        i = 0
+        while curr.next:
+            if i == pos:
+                del_node = curr
+                curr.prev.next = curr.next  # Make the previous node point forward to the next node
+                curr.next.prev = curr.prev   # Make the next node point backwards to the previous node
+                del del_node
+            curr = curr.next
+            i += 1
+        
     def del_at_end(self):
         '''Remove tail'''
         old_tail = self.tail
@@ -128,7 +158,7 @@ class DoublyLinkedList:
     
         
     
-A = DoublyNode(3)
+A = DoublyNode(4)
 dll = DoublyLinkedList(head=A)
 
 print('\n-----------Insertion & Deletion-----------')
@@ -136,25 +166,35 @@ print('~~ Current list ~~')
 dll.display()
 print(f'Head: {dll.get_head()}, Tail: {dll.get_tail()}')
 
-print('\nA. Insert 1, 2 at beginning')
-dll.insert_at_beginning(DoublyNode(2))
+print('\nA. Insert 1, 3 at beginning')
+dll.insert_at_beginning(DoublyNode(3))
 dll.insert_at_beginning(DoublyNode(1))
 dll.display()
 print(f'Head: {dll.get_head()}, Tail: {dll.get_tail()}')
 
-print('\nB. Insert 4, 5 at end')
-dll.insert_at_end(DoublyNode(4))
-dll.insert_at_end(DoublyNode(5))
+print('\nB: Insert node with val=2 at pos 1')
+dll.insert_at_pos(pos=1, node=DoublyNode(2))
 dll.display()
 print(f'Head: {dll.get_head()}, Tail: {dll.get_tail()}')
 
-print('\n3. Delete at beginning')
+print('\nC. Insert 5, 6 at end')
+dll.insert_at_end(DoublyNode(5))
+dll.insert_at_end(DoublyNode(6))
+dll.display()
+print(f'Head: {dll.get_head()}, Tail: {dll.get_tail()}')
+
+print('\nD. Delete at beginning')
 dll.del_at_beginning()
 dll.display()
 print(f'Head: {dll.get_head()}, Tail: {dll.get_tail()}')
 
-print('\n4. Delete at end')
+print('\nE. Delete at end')
 dll.del_at_end()
+dll.display()
+print(f'Head: {dll.get_head()}, Tail: {dll.get_tail()}')
+
+print('\nF: Delete node at pos 1')
+dll.del_at_pos(pos=1)
 dll.display()
 print(f'Head: {dll.get_head()}, Tail: {dll.get_tail()}')
 
