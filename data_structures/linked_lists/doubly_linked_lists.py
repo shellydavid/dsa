@@ -113,11 +113,10 @@ class DoublyLinkedList:
         curr = self.head
         i = 0
         while curr.next:
-            if i == pos-1:
-                node.next = curr.next
-                node.prev = curr
-                curr.next.prev = node
-                curr.next = node
+            if i == pos:
+                curr.prev.next = node  # Make the previous node point forward to the new node
+                node.prev = curr.prev  # Make the new node point backwards to the previous node
+                node.next = curr  # Make the new node point forwards to the current node
             curr = curr.next
             i += 1
 
